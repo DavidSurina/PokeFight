@@ -1,22 +1,19 @@
 const express = require("express");
+const cors = require('cors');
+const dotenv = require("dotenv");
+
+dotenv.config();
+const port = process.env.PORT || 4000;
+
 const app = express();
 
-const port = 3000;
-let jsonData = require('./pokedex.json');
+const pokemonRoutes = require('./routes/pokemonRoutes');
 
-app.get("/pokemon/:id/:info", (req,res) => {
-})
-app.get("/pokemon/:id", (req,res) => {})
-app.get("/pokemon", async (req,res) => {
-  try {
-    
-  }
-  catch (e){
-    console.log(e);
-    res.sendStatus(404);
-  }
-})
+app.use(cors());
+
+app.use("/pokemon", pokemonRoutes);
+app.get("/", (req, res) => res.send("Welcome"));
 
 app.listen(port, () =>
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`Server on, listening at http://localhost:${port}`)
 );
