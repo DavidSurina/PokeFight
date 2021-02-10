@@ -11,7 +11,7 @@ const pokemonRoutes = require('./routes/pokemonRoutes');
 
 app.use(cors());
 
-app.use("/pokemon", pokemonRoutes);
+app.use("/pokemons", pokemonRoutes);
 app.get("/", (req, res) => res.send("Welcome"));
 
 app.listen(port, () =>
