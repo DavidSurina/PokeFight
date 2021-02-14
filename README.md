@@ -165,8 +165,8 @@ sample schema (will be provided soon)
 - [npm - react - JavaScript library for creating user interfaces](https://www.npmjs.com/package/react)
 - [npm - react-dom - working with the DOM](https://www.npmjs.com/search?q=React-dom)
 - [npm - react-router-dom - DOM bindings for React Router](https://www.npmjs.com/package/react-router-dom)
-- [npm - @material-ui/cor - React components for faster and simpler web development](https://www.npmjs.com/package/@material-ui/core)
 - [npm - cores - enable CORS with various options](https://www.npmjs.com/package/cors)
+- [npm - @material-ui/cor - React components for faster and simpler web development](https://www.npmjs.com/package/@material-ui/core)
 
 ### MongoDB and mongoose
 - [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
