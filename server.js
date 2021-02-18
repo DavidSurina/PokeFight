@@ -6,6 +6,7 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 // import routes
 const pokemonRoutes = require('./routes/pokemonRoutes');
+const migrationRoutes = require('./routes/migrationRoutes');
 
 const app = express();
 
@@ -26,6 +27,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // ----- routes ------
 app.use("/pokemons", pokemonRoutes);
+app.use("/migrate", migrationRoutes);
 app.get("/", (req, res) => res.send("Welcome"));
 
 // ----- server -----
