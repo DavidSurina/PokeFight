@@ -1,0 +1,1 @@
+   mongoimport --username=<USERNAME> --password=<PASSWORTD> mongodb+srv://pokefight.y6ugu.mongodb.net --ssl --db=pokefight --collection=pokemons --drop --file=pokedex.json --jsonArray
