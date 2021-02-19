@@ -4,7 +4,7 @@ const Pokemon = require('../models/Pokemon');
 module.exports = {
   getAllPokemon: async (req, res) => {
     try {
-      const dbResult = await Pokemon.find({}).sort({id: 1});
+      const dbResult = await Pokemon.find({}).sort({id: "asc"});
       res.json({
         code: 200,
         operation: 'success',
