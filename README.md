@@ -75,22 +75,19 @@ WBS Coding School - Team-Project
 ### Backend
 [PokeFight on Heroku](https://evening-falls-69897.herokuapp.com)
 
-<!-- Test available endpoints for **POSTS**
+Test available endpoints for **Pokemons**
 
-- [All posts](https://flaky-tales-api.herokuapp.com/posts)
-- [Post with postId 4](https://flaky-tales-api.herokuapp.com/posts/4)
-- [All posts ordered by {rating} and sorted in {desc}ending order](https://flaky-tales-api.herokuapp.com/posts?orderby=rating&sort=desc)
-- [All posts with a rating of 4](https://flaky-tales-api.herokuapp.com/posts/ratings/4)
-- [All posts and the users data from user with userId 2](https://flaky-tales-api.herokuapp.com/posts/users/2)
-- [All posts with topicId 2](https://flaky-tales-api.herokuapp.com/posts/topics/2)
-- [Search for posts of which the title contains Cook](https://flaky-tales-api.herokuapp.com/posts/search?title=Cook)
+- [GET all Pokemons](https://evening-falls-69897.herokuapp.com/pokemons)
+- [GET Pokemon with id=1](https://evening-falls-69897.herokuapp.com/pokemons/1)
+- [GET names of Pokemon with id=1](hhttps://evening-falls-69897.herokuapp.com/pokemons/1/name)
+- [GET types of Pokemon with id=1](hhttps://evening-falls-69897.herokuapp.com/pokemons/1/type)
+- [GET bases of Pokemon with id=1](hhttps://evening-falls-69897.herokuapp.com/pokemons/1/base)
 
-Test available endpoints for **USERS**
 
-- [All users](https://flaky-tales-api.herokuapp.com/users)
-- [User with userId 2](https://flaky-tales-api.herokuapp.com/users/2)
-- [All users orderd by {username} and sorted in {desc}ending order](https://flaky-tales-api.herokuapp.com/users?orderby=username&sort=desc)
-- [Search for users of which fields contain _"tustra anz"_](https://flaky-tales-api.herokuapp.com/users/search/?who=tustra&anz) -->
+Test available endpoints for **Fights**
+
+- [GET all Fights](https://evening-falls-69897.herokuapp.com/fights)
+- [GET the 5 latest Fights](https://evening-falls-69897.herokuapp.com/fights?limit=5)
 
 ## Requirements and Installation
 
