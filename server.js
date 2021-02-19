@@ -28,7 +28,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // ----- routes ------
 app.use("/pokemons", pokemonRoutes);
-app.use("/fight", fightRoutes);
+app.use("/fights", fightRoutes);
 app.use("/migrate", migrationRoutes);
 app.get("/", (req, res) => res.send("Welcome"));
 
