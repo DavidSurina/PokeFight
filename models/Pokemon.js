@@ -1,4 +1,4 @@
-const mongoose = require(mongoose);
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const pokemonSchema = new Schema({
@@ -22,4 +22,4 @@ const pokemonSchema = new Schema({
     weight: Number,
 });
 
-module.exports = mongoose.model(Pokemons, pokemonSchema);
+module.exports = mongoose.model("Pokemons", pokemonSchema);
