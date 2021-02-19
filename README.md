@@ -68,6 +68,11 @@ WBS Coding School - Team-Project
 
 ---
 
+### Design and Architecture
+![WireFrame](https://raw.githubusercontent.com/DavidSurina/PokeFight/readme/2021-02-10_17-48-41.png)
+![Mockup top](https://raw.githubusercontent.com/DavidSurina/PokeFight/readme/image-2.png)
+![Mockup bottom](https://raw.githubusercontent.com/DavidSurina/PokeFight/readme/image.png)
+
 ## Demo
 ### Wireframe and Mockup
 ![wireframe](https://github.com/DavidSurina/PokeFight/blob/dev/Wireframe.pdf)
