@@ -1,14 +1,15 @@
-const jsonData = require('../data/pokedex.json');
+const Pokemon = require('../models/Pokemon');
 
 
 module.exports = {
   getAllPokemon: async (req, res) => {
     try {
-      await res.json({
+      const dbResult = await Pokemon.find({}).sort({id: "asc"});
+      res.json({
         code: 200,
         operation: 'success',
-        description: 'Poke data - all pokemon',
-        data: jsonData,
+        description: `fetched ${dbResult.length} Pokemons`,
+        data: dbResult,
         msg: 'This is CORS-enabled for all origins!',
       });
     } catch (e) {
@@ -19,16 +20,17 @@ module.exports = {
   getPokemonById: async (req, res) => {
     try {
       const { id } = req.params;
-      const pokemon = jsonData.filter(
-        (pokemon) => pokemon.id.toString() === id
-      );
-      console.log(pokemon);
-
-      await res.json({
+      const dbResult = await Pokemon.find({ id: parseInt(id) });
+      if(!dbResult.length) throw {
+        status: 404,
+        operation: "not found",
+        message: ` Pokemon with the ID ${id} was not found`,
+      };
+      res.json({
         code: 200,
         operation: 'success',
-        description: `Poke data - selected by id #${id}`,
-        data: pokemon,
+        description: `fetch Pokemon with the ID ${id}`,
+        data: dbResult,
         msg: 'This is CORS-enabled for all origins!',
       });
     } catch (e) {
@@ -39,15 +41,17 @@ module.exports = {
   getPokemonInfo: async (req, res) => {
     const { id, info } = req.params;
     try {
-      const pokemon = jsonData.filter(
-        (pokemon) => pokemon.id.toString() === id
-      );
-
-      await res.json({
+      const dbResult = await Pokemon.find({ id: parseInt(id) });
+      if(!dbResult.length) throw {
+        status: 404,
+        operation: "not found",
+        message: ` Pokemon with the ID ${id} was not found`,
+      };
+      res.json({
         code: 200,
         operation: 'success',
-        description: 'Poke data',
-        data: pokemon[0][info],
+        description: `fetch ${info}s of the Pokemon with the ID ${id}`,
+        data: dbResult[0][info],
         msg: 'This is CORS-enabled for all origins!',
       });
     } catch (e) {

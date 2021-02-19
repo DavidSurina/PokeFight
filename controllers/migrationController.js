@@ -1,11 +1,11 @@
 const jsonData = require("../data/pokedex.json");
-const Pokemon = require("../models/Pokemon")
+/* const Pokemon = require("../models/Pokemon"); */
 
 
 module.exports = {
   getAllPokemon: async (req, res) => {
     try {
-      await Pokemon.
+      /* await Pokemon.find({}) */
       await res.json({
         code: 200,
         operation: 'success',
