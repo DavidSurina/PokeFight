@@ -69,6 +69,9 @@ WBS Coding School - Team-Project
 ---
 
 ## Demo
+### Wireframe and Mockup
+![wireframe](https://github.com/DavidSurina/PokeFight/blob/dev/Wireframe.pdf)
+
 ### Frontend
 [PokeFightReactApp on Netlify](https://pokefigth.netlify.app)
 
