@@ -1,11 +1,11 @@
 const express = require("express");
 const router = express.Router();
 
-const MigrationController = require("../controllers/migrationController");
+const { getAllPokemon } = require("../controllers/migrationController");
 
-router
+/* router
   .route("/")
-  .get(MigrationController.getAllPokemon)
+  .get(MigrationController.getAllPokemon) */
 
 
 module.exports = router;
