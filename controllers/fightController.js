@@ -2,23 +2,14 @@ const Fight = require('../models/Fight');
 
 module.exports = {
   getAllFights: async (req, res) => {
+    let { limit } = req.query;
+    limit = parseInt(limit);
+    
+    console.log(limit);
     try {
-      const dbResult = await Fight.find({}).sort({date: "desc"});
-      res.json({
-        code: 200,
-        operation: 'success',
-        description: `fetched ${dbResult.length} Fights`,
-        data: dbResult,
-        msg: 'This is CORS-enabled for all origins!',
-      });
-    } catch (e) {
-      console.log(e);
-      res.sendStatus(404);
-    }
-  },
-  getLatestFights: async (req, res) => {
-    try {
-      const dbResult = await Fight.find({}).sort({date: "desc"}).limit(5);
+      let dbResult = await Fight.find({}).sort({date: "desc"});
+      // if there is a query parameter limit the fight results are limited
+      if(limit) dbResult = await Fight.find({}).sort({date: "desc"}).limit(limit);
       res.json({
         code: 200,
         operation: 'success',

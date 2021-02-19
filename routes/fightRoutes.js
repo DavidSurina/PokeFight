@@ -9,10 +9,6 @@ router
   .get(fightController.getAllFights);
 
 router
-.route("/latest")
-.get(fightController.getLatestFights);
-
-router
   .route("/create")
   .post(fightController.create)
 
