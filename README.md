@@ -74,22 +74,22 @@ WBS Coding School - Team-Project
 ![Mockup bottom](https://raw.githubusercontent.com/DavidSurina/PokeFight/readme/image.png)
 
 ## Demo
-### Wireframe and Mockup
-![wireframe](https://github.com/DavidSurina/PokeFight/blob/dev/Wireframe.pdf)
 
 ### Frontend
 [PokeFightReactApp on Netlify](https://pokefigth.netlify.app)
+[PokeFightReactApp on Github](https://github.com/widukin/PokeFightReactApp)
 
 ### Backend
 [PokeFight on Heroku](https://evening-falls-69897.herokuapp.com)
+[PokeFight on Github](https://github.com/DavidSurina/PokeFight)
 
 Test available endpoints for **Pokemons**
 
 - [GET all Pokemons](https://evening-falls-69897.herokuapp.com/pokemons)
 - [GET Pokemon with id=1](https://evening-falls-69897.herokuapp.com/pokemons/1)
-- [GET names of Pokemon with id=1](hhttps://evening-falls-69897.herokuapp.com/pokemons/1/name)
-- [GET types of Pokemon with id=1](hhttps://evening-falls-69897.herokuapp.com/pokemons/1/type)
-- [GET bases of Pokemon with id=1](hhttps://evening-falls-69897.herokuapp.com/pokemons/1/base)
+- [GET names of Pokemon with id=1](https://evening-falls-69897.herokuapp.com/pokemons/1/name)
+- [GET types of Pokemon with id=1](https://evening-falls-69897.herokuapp.com/pokemons/1/type)
+- [GET bases of Pokemon with id=1](https://evening-falls-69897.herokuapp.com/pokemons/1/base)
 
 
 Test available endpoints for **Fights**
@@ -124,11 +124,46 @@ $ cd PokeFight
 $ npm install
 ```
 
-To run the application (databse required!): `$ node .`
+To run the application (databse required!): 
 
 ### Database
 
-sample schema (will be provided soon)
+#### Pokemon
+
+```javascript
+{
+  _id: {type: Number, required: true, unique: true},
+  id: {type: Number, required: true, unique: true, dropDups: true},
+    name: { english: String, japanese: String, chinese: String, french: String },
+    type: [],
+    base: {
+      hp: Number,
+      attack: Number,
+      defense: Number,
+      special_attack: Number,
+      special_defense: Number,
+      speed: Number,
+    },
+    image: String,
+    sprite: {
+      front: String,
+      back: String,
+    },
+    size: Number,
+    weight: Number,
+}
+```
+
+#### Fight
+
+```javascript
+{
+  _id: {type: Number, required: true, unique: true},
+  winner_id: {type: Number, required: true},
+  looser_id: {type: Number, required: true},
+  date: {type: Date, default: Date.now},
+}
+```
 
 ## Technologies and Tools
 
@@ -206,4 +241,3 @@ sample schema (will be provided soon)
 
 - [PokéAPI](https://pokeapi.co)
 - [PokeresBastionbot](https://pokeres.bastionbot.org/images/pokemon/1.png)
-
