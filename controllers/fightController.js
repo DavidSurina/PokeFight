@@ -23,11 +23,17 @@ module.exports = {
     }
   },
   create: async (req, res) => {
-    const { winner_id, looser_id } = req.body;
+    const { winner_id, winner_name, looser_id, looser_name} = req.body;
     try {
       await Fight.create({
-        winner_id,
-        looser_id,
+        winner: {
+          winner_id,
+          winner_name,
+        },
+        looser: {
+          looser_id,
+          looser_name,
+        },
       });
       res.json({
         code: 200,
