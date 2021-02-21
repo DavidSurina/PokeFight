@@ -5,7 +5,6 @@ module.exports = {
     let { limit } = req.query;
     limit = parseInt(limit);
     
-    console.log(limit);
     try {
       let dbResult = await Fight.find({}).sort({date: "desc"});
       // if there is a query parameter limit the fight results are limited
@@ -23,11 +22,18 @@ module.exports = {
     }
   },
   create: async (req, res) => {
-    const { winner_id, looser_id } = req.body;
+    const { date, winner_id, winner_name, looser_id, looser_name } = req.body;
     try {
       await Fight.create({
-        winner_id,
-        looser_id,
+        date: date,
+        winner: {
+          winner_id,
+          winner_name,
+        },
+        looser: {
+          looser_id,
+          looser_name,
+        },
       });
       res.json({
         code: 200,
