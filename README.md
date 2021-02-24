@@ -77,10 +77,12 @@ WBS Coding School - Team-Project
 
 ### Frontend
 [PokeFightReactApp on Netlify](https://pokefigth.netlify.app)
+
 [PokeFightReactApp on Github](https://github.com/widukin/PokeFightReactApp)
 
 ### Backend
 [PokeFight on Heroku](https://evening-falls-69897.herokuapp.com)
+
 [PokeFight on Github](https://github.com/DavidSurina/PokeFight)
 
 Test available endpoints for **Pokemons**
